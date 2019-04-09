@@ -105,8 +105,8 @@ var squeezeContainer = function (element, originalHeight, bottomRange, topRange)
 // of the entire headline. If the headline is bigger than the
 // span by 10px we balance the headline.
 var textElementIsMultipleLines = function (element) {
-    if(!element) return
-    
+    if(!element) return 0
+
     var firstWordHeight;
     var elementHeight;
     var HEIGHT_OFFSET;
@@ -131,6 +131,7 @@ var textElementIsMultipleLines = function (element) {
     // make span for first word and give it an id
     // so we can access it in le dom
     firstWord = document.createElement('span');
+    if(!firstWord) return 0
     firstWord.id = 'element-first-word';
     firstWord.innerHTML = elementWords[0];
 
