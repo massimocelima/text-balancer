@@ -18,6 +18,13 @@ var textBalancer = function (selectors) {
     }, 100);
 
     window.addEventListener('resize', rebalanceText);
+    return function() {
+        destroy(rebalanceText)
+    }
+}
+
+var destroy = function (rebalanceText) {
+    window.removeEventListener('resize', rebalanceText);
 }
 
 // this populates our candidates array with dom objects
