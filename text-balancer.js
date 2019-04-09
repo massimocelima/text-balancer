@@ -105,6 +105,8 @@ var squeezeContainer = function (element, originalHeight, bottomRange, topRange)
 // of the entire headline. If the headline is bigger than the
 // span by 10px we balance the headline.
 var textElementIsMultipleLines = function (element) {
+    if(!element) return
+    
     var firstWordHeight;
     var elementHeight;
     var HEIGHT_OFFSET;
