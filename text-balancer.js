@@ -150,7 +150,7 @@ var textElementIsMultipleLines = function (element) {
 
     // update the first word variable in the dom
     firstWord = document.getElementById('element-first-word');
-
+    if(!firstWord) return 0
     firstWordHeight = firstWord.offsetHeight;
     elementHeight = element.offsetHeight;
     // restore the original element text
